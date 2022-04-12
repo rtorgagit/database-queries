@@ -52,7 +52,9 @@ export class CreateGenres1649738182793 implements MigrationInterface {
         onDelete: "CASCADE",
         onUpdate: "NO ACTION"
       })
-    ); await queryRunner.createForeignKey("games_genres",
+    );
+
+    await queryRunner.createForeignKey("games_genres",
       new TableForeignKey({
         name: "FK_genresId",
         columnNames: ["genresId"],
